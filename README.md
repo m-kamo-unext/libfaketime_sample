@@ -1,4 +1,4 @@
-# libfaketime
+# libfaketime_sample
 
 libfaketimeを使ってプロセスから見えるシステム時刻を変更するサンプル。
 
