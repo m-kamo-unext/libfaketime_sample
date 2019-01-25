@@ -1,6 +1,6 @@
 # libfaketime_sample
 
-libfaketimeを使ってプロセスから見えるシステム時刻を変更するサンプル。
+libfaketimeを使ってプロセスから見えるシステム時刻を変更するdockerイメージのサンプル。
 
 HTTPで`LocalDateTime.now()`を返すだけのSpring Bootアプリケーションを，
 libfaketimeを仕込んだdockerコンテナ上で動かす。
