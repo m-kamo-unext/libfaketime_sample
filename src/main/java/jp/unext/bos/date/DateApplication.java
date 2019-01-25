@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @Controller
 @RestController
-@RequestMapping("/date")
+@RequestMapping
 public class DateApplication {
 
   public static void main(String[] args) {
