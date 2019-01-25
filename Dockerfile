@@ -32,5 +32,5 @@ ENV TZ=Asia/Tokyo
 
 # jarのコピーと起動
 WORKDIR /app
-COPY ./build/libs/libfaketime-*.jar /app/
-ENTRYPOINT ls -1t libfaketime-*.jar | xargs -I {} java -jar {} -Djava.security.egd=file:/dev/urandom
+COPY ./build/libs/libfaketime_sample-*.jar /app/
+ENTRYPOINT ls -1t libfaketime_sample-*.jar | xargs -I {} java -jar {} -Djava.security.egd=file:/dev/urandom
