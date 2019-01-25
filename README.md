@@ -1,12 +1,14 @@
 # libfaketime
 
-アプリケーションのビルド。
+libfaketimeを使ってプロセスから見えるシステム時刻を変更するサンプル。
+
+HTTPで`LocalDateTime.now()`を返すだけのSpring Bootアプリケーションを，
+libfaketimeを仕込んだdockerコンテナ上で動かす。
+
+## 使用方法
+アプリケーションのビルドとイメージの作成。
 ```
 ./gradlew build
-```
-
-イメージの作成。
-```
 docker build -t libfaketime .
 ```
 
@@ -17,6 +19,8 @@ docker run --rm --name libfaketime -d -p8080:8080 libfaketime
 
 起動したままシステム時刻を変更できる。
 ```
+curl localhost:8080/date; echo
+
 docker exec libfaketime sh -c "echo '@2000-01-01 09:00:00' > /etc/faketimerc"
 curl localhost:8080/date; echo
 
